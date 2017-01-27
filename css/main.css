@@ -1,0 +1,336 @@
+/* Main css for About Me Website */
+
+/* -------- Box Sizing -------- */
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body{
+	font-family:'Roboto', Helvetica, Arial, sans-serif;
+	font-size:16px;
+	line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family:'Roboto Condensed' Helvetica, Arial, sans-serif;
+}
+
+h1{font-size: 2.074em;}
+h2{font-size: 1.728em;}
+h3{font-size: 1.618em;}
+h4{font-size: 1.44em;}
+h5{font-size: 1.2em;}
+h6{font-size: 1em;}
+
+h1,h2,h3,h4,h5,h6{
+	margin:0 0 0.5em 0;
+}
+
+.section__heading{
+	font-size:2.074em;
+}
+
+p{margin:0 0 1rem 0;}
+
+.serif{
+	font-family: 'Noto Serif', Georgia, 'Times New Roman', serif;
+	font-style:italic;
+}
+
+.lead{
+	line-height:1.5;
+	font-size:1.5em;
+	color:#999;
+	font-weight:300;
+}
+
+/* ================
+	Header Styles 
+=================== */
+
+#header-wrapper, #site-footer .wrapper{
+	max-width:1080px;
+	margin:0 auto;
+}
+
+#site-header{
+	min-height:200px;
+	background-color:#333;
+}
+
+#site-header.home{
+	min-height:100vh;
+	margin:0;
+	padding:0;
+	background:url(../images/rachel-canyoneering-tunnel-1920x1080.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+.site-header__logo{
+	background-color:rgba(255,255,255,0.9);
+	float:left;
+	padding:5px 15px;
+	border-top:3px solid #a81010;
+}
+
+#primary-nav{
+	float:right;
+	margin:0;
+	padding:0;
+	list-style:none;
+	margin-top:20px;
+}
+
+#primary-nav li{
+	float:left;
+	display:block;
+	position:relative;
+}
+
+#primary-nav > li a{
+	padding:15px 20px;
+	text-transform:uppercase;
+	font-size:0.9em;
+	color:#fff;
+	color:rgba(255,255,255,0.7);
+	text-decoration:none;
+	transition:color 0.3s ease;
+}
+
+#primary-nav > li a:hover,
+#primary-nav > li a:focus,
+#primary-nav > li a.active{
+	color:#fff;
+	border-bottom:2px solid #a81010;
+}
+
+.hero-content{
+	width:100%;
+	max-width:100%;
+	height:100%;
+	margin-left:auto;
+	margin-right:auto;
+	display:table;
+	table-layout:fixed;
+	position:absolute;
+	z-index:2;
+}
+
+.hero-content__inner{
+	height:100%;
+	vertical-align: middle;
+	display:table-cell;
+	float:none;
+}
+
+
+.hero-content__inner h1{
+	font-size:5em;
+	line-height:1;
+	color:#fff;
+}
+
+.hero-content h1 .serif{
+	font-size:0.5em;
+}
+
+/* ================
+	Layout
+=================== */
+
+#main-content{
+	padding-top:2em;
+}
+
+.section{
+	padding:1rem 0;
+	position:relative;
+}
+
+#site-footer{
+	background-color:#333;
+	color:#fff;
+}
+
+#site-footer .wrapper{
+	padding:2em 0;
+}
+
+/* ================
+	Body Styles
+=================== */
+
+
+.lineonsides {
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	border-bottom: 3px solid #909090;
+	line-height: 0;
+	padding: 0;
+	margin-bottom:0.6em;
+	margin-top: 0.1em;
+	letter-spacing: 0;
+	font-weight: 300;
+	font-size: 1.75em;
+}
+
+.lineonsides span{
+	background: #c00;
+	padding: 0 1.5em;
+}
+
+.goals ol{
+	font-size:2em;
+	color:#666;
+	counter-reset:item;
+}
+
+.goals ol li{
+	display:block;
+	padding:0.25em 0;
+}
+
+.goals ol li:before{
+	content:counter(item) ". ";
+	counter-increment:item;
+	color:#c00;
+	font-weight: bold;
+	margin-left:-1em;
+}
+
+
+/* ================
+	Form Styles
+=================== */
+
+.form-group{
+	clear:both;
+	margin:1em 0;
+}
+
+#contact-form input{
+	border:1px solid #999;
+	border-radius:3px;
+}
+
+textarea{
+	display:block;
+	border:1px solid #999;
+	border-radius:3px;
+}
+
+input.submit{
+	background-color:#c00;
+	border:0;
+	color:#fff;
+	padding:5px 10px;
+	border-radius:3px;
+}
+
+#contact-form label{
+	width:125px;
+	display:inline-block;
+}
+
+
+/* ================
+	Grid Styles 
+=================== */
+
+.row{
+	max-width:1080px;
+	margin:0 auto;
+}
+
+.row:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.col-half__wide-margin-left, .col-half__wide-margin-right{
+    width:100%;
+    float:none;
+}
+
+.col-one-fourth, .col-two-thirds, .col-one-third{
+    width:100%;
+    padding:0 15px;
+}
+
+
+
+@media screen and (min-width: 550px) {
+    .col-one-fourth{
+        width:50%;
+    }
+
+    .col-two-thirds{
+		float:left;
+		width:66.67%;
+	}
+
+	.col-one-third{
+		float:left;
+		width:33.33%;
+	}
+}
+
+
+@media screen and (min-width: 768px) {
+    .col-half__wide-margin-left{
+        width:45%;
+        float:left;
+    }
+
+    .col-half__wide-margin-right{
+        width:45%;
+        float:right;
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+
+}
+@media screen and (min-width: 1080px) {
+    .col-one-fourth{
+        width:25%;
+    }
+
+}
+
+
+
+
+/* =================
+	Utility Classes 
+===================== */
+
+.clearfix:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.red{
+	color:#a81010;
+}
+
+.aligncenter{
+	text-align: center;
+}
+
+.uppercase{text-transform: uppercase;}
+
+/* Responsive images */
+#main-content img {
+	max-width: 100%;
+	height: auto;
+}
+
